@@ -24,7 +24,7 @@ npm install slim-fa-picker --save
 
 ## Tests
 
-This project there no test, please make a pull request if want help.
+This project there no test, please make a pull request if wanna help.
 
 
 ## License
