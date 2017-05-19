@@ -6,7 +6,7 @@ Just a Simple Javascript ES6 module for create a Fonts Awesome Picker.
 ## Code Example
 
 ```js
-import faPicker from 'slim-fa-picker'
+import faPicker from 'fa-picker'
 
 const input = document.querySelector('input')
 
@@ -18,7 +18,7 @@ faPicker(input)
 
 
 ```sh
-npm install slim-fa-picker --save
+npm install fa-picker --save
 
 ```
 
