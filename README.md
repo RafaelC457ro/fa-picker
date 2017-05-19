@@ -1,4 +1,4 @@
-# slim-fa-picker
+# fa-picker
 
 Just a Simple Javascript ES6 module for create a Fonts Awesome Picker.
 
