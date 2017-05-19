@@ -1,11 +1,11 @@
 {
   "name": "fa-picker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create a Fonts Awesome Picker ",
   "main": "dist/fa-picker.js",
   "scripts": {
-    "generate":"node build.js",
-    "build":"rollup -c",
+    "generate": "node build.js",
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rafael Castro",
