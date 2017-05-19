@@ -1,0 +1,24 @@
+.dropdown-search {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  position: absolute;
+  width: calc(100% - 30px); /* parent element minus bootstrap gutter */
+  z-index: 100;
+  list-style-type: none;
+  border: 1px solid #CBD5DD;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.mini-box-icon {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  height: 30px;
+  flex: 1;
+  min-width: 30px;
+
+}
