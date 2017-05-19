@@ -1,4 +1,8 @@
-'use strict';
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.faPicker = factory());
+}(this, (function () { 'use strict';
 
 function __$styleInject(css, returnValue) {
   if (typeof document === 'undefined') {
@@ -84,4 +88,6 @@ var faPicker = function (element, config) {
   addInputHandler(element, list);
 };
 
-module.exports = faPicker;
+return faPicker;
+
+})));

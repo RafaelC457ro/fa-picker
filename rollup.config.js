@@ -6,7 +6,8 @@ import cssnext from 'postcss-cssnext';
 
 export default {
   entry: 'src/fa-picker.js',
-  format: 'cjs',
+  format: 'umd',
+  moduleName:'faPicker',
   plugins: [
     resolve(),
     postcss({
