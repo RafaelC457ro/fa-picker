@@ -2,6 +2,8 @@
 
 Just a Simple Javascript ES6 module for create a Fonts Awesome Picker.
 
+![exemple](images/fa-picker.gif)
+
 
 ## Code Example
 
