@@ -1,8 +1,13 @@
-import resolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
-import postcss from 'rollup-plugin-postcss';
-import commonjs from 'rollup-plugin-commonjs';
-import cssnext from 'postcss-cssnext';
+import resolve from 'rollup-plugin-node-resolve'
+import babel from 'rollup-plugin-babel'
+import postcss from 'rollup-plugin-postcss'
+import commonjs from 'rollup-plugin-commonjs'
+import cssnext from 'postcss-cssnext'
+import postcssModules from 'postcss-modules'
+import cssnano from 'cssnano'
+import json from 'rollup-plugin-json'
+
+const cssExportMap = {}
 
 export default {
   entry: 'src/fa-picker.js',
@@ -10,15 +15,27 @@ export default {
   plugins: [
     resolve(),
     postcss({
-      plugins:[
-        cssnext()
+      plugins: [
+        cssnext({
+          warnForDuplicates: false
+        }),
+        postcssModules({
+          getJSON (id, exportTokens) {
+            cssExportMap[id] = exportTokens;
+          }
+        }),
+        cssnano()
       ],
       extensions: ['.css'],
+      getExport (id) {
+        return cssExportMap[id];
+      }
     }),
+    json(),
     commonjs(),
     babel({
-      exclude: 'node_modules/**' // only transpile our source code
+      exclude: 'node_modules/**'
     })
   ],
   dest: 'dist/fa-picker.js'
-};
+}
