@@ -1,4 +1,4 @@
-import fa from './fa-json'
+import fa from './fa.json'
 import style from './style.css'
 
 

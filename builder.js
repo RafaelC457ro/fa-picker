@@ -7,7 +7,7 @@ var font = path.resolve(
 )
 var dest = path.resolve(
   __dirname,
-  './src/fa-json.js'
+  './src/fa.json'
 )
 
 
@@ -19,7 +19,7 @@ fs.readFile(font,(error, data) =>{
     list.push(matches[1]);
   }
 
-  result = 'export default ' + JSON.stringify(list,null,2);
+  result = JSON.stringify(list,null,2);
 
   fs.writeFile(dest,result,'utf8',(err)=>{
     if (err) throw err;

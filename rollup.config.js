@@ -3,6 +3,8 @@ import babel from 'rollup-plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import commonjs from 'rollup-plugin-commonjs';
 import cssnext from 'postcss-cssnext';
+import cssnano from 'cssnano'
+import json from 'rollup-plugin-json'
 
 export default {
   entry: 'src/fa-picker.js',
@@ -11,10 +13,14 @@ export default {
     resolve(),
     postcss({
       plugins:[
-        cssnext()
+        cssnext({
+          warnForDuplicates: false
+        }),
+        cssnano()
       ],
       extensions: ['.css'],
     }),
+    json(),
     commonjs(),
     babel({
       exclude: 'node_modules/**' // only transpile our source code
