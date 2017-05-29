@@ -1,4 +1,4 @@
-.dropdown-search {
+:local .dropdownSearch {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -13,12 +13,11 @@
   background-color: #fff;
 }
 
-.mini-box-icon {
+:local .miniBoxIcon {
   display: flex;
   align-items:center;
   justify-content: center;
   height: 30px;
   flex: 1;
   min-width: 30px;
-
 }
