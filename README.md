@@ -1,11 +1,31 @@
 # fa-picker
 
-Just a Simple Javascript ES6 module for create a Fonts Awesome Picker.
+[![npm (scoped)](https://img.shields.io/npm/v/fa-picker.svg)](https://www.npmjs.com/package/fa-picker)
+[![Travis](https://img.shields.io/travis/RafaelC457ro/fa-picker.svg)](https://travis-ci.org/RafaelC457ro/fa-picker)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-![exemple](images/fa-picker.gif)
+> Simple font-awesome picker.
 
+![example](images/fa-picker.gif)
 
-## Code Example
+## Table of Contents
+
+- [Install](#install)
+- [Usage](#usage)
+- [Support](#support)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Install
+
+This project uses [node](http://nodejs.org) and [npm](https://npmjs.com).
+Go check them out if you don't have them locally installed.
+
+```sh
+$ npm install --save fa-picker
+```
+
+## Usage
 
 ```js
 import faPicker from 'fa-picker'
@@ -16,18 +36,9 @@ faPicker(input)
 
 ```
 
-## Installation
+## Contributing
 
-
-```sh
-npm install fa-picker --save
-
-```
-
-## Tests
-
-This project there no test, please make a pull request if wanna help.
-
+See the [contributing file](CONTRIBUTING.md).
 
 ## License
 
