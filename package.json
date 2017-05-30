@@ -7,7 +7,8 @@
     "build": "node builder.js && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npm run prettify && xo --fix",
-    "prettify": "prettier --single-quote --no-semi --no-bracket-spacing --trailing-comma none --write \"src/**/*.js\" --write rollup.config.js --write builder.js"
+    "prettify": "prettier --single-quote --no-semi --no-bracket-spacing --trailing-comma none --write \"src/**/*.js\" --write rollup.config.js --write builder.js",
+    "prepublish": "npm run build"
   },
   "author": "Rafael Castro",
   "license": "MIT",
