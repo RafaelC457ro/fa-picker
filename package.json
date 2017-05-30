@@ -1,7 +1,7 @@
 {
   "name": "fa-picker",
   "version": "0.0.6",
-  "description": "Create a Fonts Awesome Picker ",
+  "description": "Simple font-awesome picker",
   "main": "dist/fa-picker.js",
   "scripts": {
     "build": "node builder.js && rollup -c",
