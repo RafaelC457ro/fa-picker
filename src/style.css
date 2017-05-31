@@ -1,23 +1,23 @@
 :local .dropdownSearch {
+  background-color: #fff;
+  border: 1px solid #cbd5dd;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  list-style-type: none;
+  max-height: 150px;
+  overflow-y: auto;
   padding: 0;
   position: absolute;
   width: calc(100% - 30px); /* parent element minus bootstrap gutter */
   z-index: 100;
-  list-style-type: none;
-  border: 1px solid #CBD5DD;
-  max-height: 150px;
-  overflow-y: auto;
-  background-color: #fff;
 }
 
 :local .miniBoxIcon {
+  align-items: center;
   display: flex;
-  align-items:center;
-  justify-content: center;
-  height: 30px;
   flex: 1;
+  height: 30px;
+  justify-content: center;
   min-width: 30px;
 }

@@ -6,9 +6,11 @@
   "scripts": {
     "build": "node builder.js && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npm run prettify && xo --fix",
+    "lint:css": "stylelint src/style.css",
     "prettify": "prettier --single-quote --no-semi --no-bracket-spacing --trailing-comma none --write \"src/**/*.js\" --write rollup.config.js --write builder.js",
-    "prepublish": "npm run build"
+    "lint": "npm run prettify && xo --fix && npm run lint:css",
+    "prepublish": "npm run build",
+    "precommit": "npm run lint && npm run build"
   },
   "author": "Rafael Castro",
   "license": "MIT",
@@ -18,6 +20,7 @@
     "babel-preset-latest": "^6.24.1",
     "cssnano": "^3.10.0",
     "font-awesome": "^4.7.0",
+    "husky": "^0.13.4",
     "postcss-cssnext": "^2.11.0",
     "postcss-modules": "^0.8.0",
     "prettier": "^1.3.1",
@@ -27,6 +30,9 @@
     "rollup-plugin-json": "^2.1.1",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-postcss": "^0.5.0",
+    "stylelint": "^7.10.1",
+    "stylelint-order": "^0.4.4",
+    "stylelint-suitcss": "^1.0.0",
     "xo": "^0.18.2"
   },
   "files": [
