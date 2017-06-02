@@ -59,9 +59,11 @@ export default function (element) {
 
   const list = document.createElement('div')
   const parent = element.parentNode
+  const width = element.offsetWidth
 
   list.setAttribute('class', style.dropdownSearch)
   list.style.display = 'none'
+  list.style.width = width + 'px'
   buildListicons(list)
   addClickHandler(list, element)
   parent.appendChild(list)
