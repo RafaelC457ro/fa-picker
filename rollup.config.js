@@ -35,7 +35,19 @@ export default {
     json(),
     commonjs(),
     babel({
-      exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
+      babelrc: false,
+      presets: [
+        [
+          'latest',
+          {
+            es2015: {
+              modules: false
+            }
+          }
+        ]
+      ],
+      plugins: ['external-helpers']
     })
   ],
   dest: 'dist/fa-picker.js'
