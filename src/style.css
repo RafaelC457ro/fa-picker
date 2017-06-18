@@ -9,7 +9,6 @@
   overflow-y: auto;
   padding: 0;
   position: absolute;
-  width: calc(100% - 30px); /* parent element minus bootstrap gutter */
   z-index: 100;
 }
 
