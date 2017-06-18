@@ -1,52 +1,6 @@
 import fa from './fa.json'
 import style from './style.css'
-
-function buildListicons(context) {
-  const list = fa
-    .map(
-      item =>
-        `<div class=${style.miniBoxIcon}><i class="fa ${item}" data=${item}></i></div>`
-    )
-    .join('')
-
-  context.innerHTML = list
-}
-
-function addClickHandler(context, input) {
-  if (!context) {
-    return
-  }
-
-  context.addEventListener('click', event => {
-    const target = event.target
-
-    if (target.nodeName === 'I') {
-      fillInput(input, target.getAttribute('data'))
-      return false
-    }
-
-    const any = target.querySelector('i')
-    fillInput(input, any.getAttribute('data'))
-  })
-}
-
-function fillInput(input, value) {
-  input.value = value
-}
-
-function addInputHandler(input, list) {
-  input.addEventListener('click', () => {
-    list.style.display = 'flex'
-  })
-
-  document.body.addEventListener('click', event => {
-    const target = event.target
-
-    if (!(target === input)) {
-      list.style.display = 'none'
-    }
-  })
-}
+import {buildListicons, addClickHandler, addInputHandler} from './utils'
 
 export default function (element) {
   if (!element) {
@@ -59,10 +13,12 @@ export default function (element) {
 
   const list = document.createElement('div')
   const parent = element.parentNode
+  const width = element.offsetWidth
 
   list.setAttribute('class', style.dropdownSearch)
   list.style.display = 'none'
-  buildListicons(list)
+  list.style.width = width + 'px'
+  list.innerHTML = buildListicons(fa, style)
   addClickHandler(list, element)
   parent.appendChild(list)
 
